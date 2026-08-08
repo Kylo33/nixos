@@ -1,12 +1,12 @@
-{ config, pkgs, ... }:
+{ config, pkgs, username, ... }:
 
 {
   imports = [
     ./nvim
   ];
 
-  home.username = "renng";
-  home.homeDirectory = "/home/renng";
+  home.username = username;
+  home.homeDirectory = "/home/${username}";
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [

@@ -16,22 +16,24 @@
       ...
     }:
     let
+      username = "renng";
       hostname = "nixos";
+      specialArgs = { inherit username hostname; };
     in
     {
       nixosConfigurations = {
         laptop = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit hostname; };
+          inherit specialArgs;
+
           modules = [
             ./hosts/laptop
-
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
 
-              # TODO: refactor username
-              home-manager.users.renng = import ./home.nix;
+              home-manager.extraSpecialArgs = specialArgs;
+              home-manager.users.${username} = import ./home;
             }
           ];
         };

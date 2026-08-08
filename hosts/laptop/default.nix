@@ -1,4 +1,4 @@
-{ config, pkgs, hostname, ... }:
+{ config, pkgs, username, hostname, ... }:
 
 {
   imports = [
@@ -59,7 +59,7 @@
     pulse.enable = true;
   };
 
-  users.users."renng" = {
+  users.users.${username} = {
     isNormalUser = true;
     description = "Renn Gilbert";
     extraGroups = [ "networkmanager" "wheel" ];
