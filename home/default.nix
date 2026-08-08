@@ -7,6 +7,7 @@
     ./ghostty
     ./tmux
     ./git
+    ./xdg
   ];
 
   home.username = username;
