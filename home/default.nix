@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./nvim
+  ];
+
   home.username = "renng";
   home.homeDirectory = "/home/renng";
 
@@ -14,10 +18,6 @@
     obsidian
     syncthing
     tmux
-
-    clang-tools
-    nixd
-    nixfmt
   ];
 
   programs.fish = {
@@ -54,24 +54,6 @@
     };
   };
 
-  programs.neovim = {
-    enable = true;
-    initLua = builtins.readFile ./init.lua;
-    defaultEditor = true;
-    plugins = with pkgs.vimPlugins; [
-      { plugin = nvim-treesitter.withAllGrammars; }
-      { plugin = nvim-lspconfig; }
-      { plugin = mini-ai; }
-      { plugin = mini-extra; }
-      { plugin = mini-pairs; }
-      { plugin = mini-pick; }
-      { plugin = mini-surround; }
-      { plugin = blink-cmp; }
-      { plugin = oil-nvim; }
-      { plugin = sonokai; }
-      { plugin = indent-o-matic; }
-    ];
-  };
 
   services.syncthing = {
     enable = true;
@@ -85,13 +67,5 @@
     customPaneNavigationAndResize = true;
   };
 
-  # This value determines the home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new home Manager release introduces backwards
-  # incompatible changes.
-  #
-  # You can update home Manager without changing this value. See
-  # the home Manager release notes for a list of state version
-  # changes in each release.
   home.stateVersion = "26.05";
 }
