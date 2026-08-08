@@ -15,11 +15,15 @@
       home-manager,
       ...
     }:
+    let
+      hostname = "nixos";
+    in
     {
       nixosConfigurations = {
         laptop = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit hostname; };
           modules = [
-            ./configuration.nix
+            ./hosts/laptop
 
             home-manager.nixosModules.home-manager
             {
