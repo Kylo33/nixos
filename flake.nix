@@ -1,8 +1,7 @@
 {
-  description = "A simple NixOS flake";
+  description = "Renn's NixOS Configuration";
 
   inputs = {
-    # NixOS official package source, using the nixos-26.05 branch here
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
@@ -10,20 +9,28 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      modules = [
-        # Import the previous configuration.nix we used,
-        # so the old configuration file still takes effect
-        ./configuration.nix
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      ...
+    }:
+    {
+      nixosConfigurations = {
+        laptop = nixpkgs.lib.nixosSystem {
+          modules = [
+            ./configuration.nix
 
-	home-manager.nixosModules.home-manager
-	{
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-	  home-manager.users.renng = import ./home.nix;
-	}
-      ];
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+
+              # TODO: refactor username
+              home-manager.users.renng = import ./home.nix;
+            }
+          ];
+        };
+      };
     };
-  };
 }
