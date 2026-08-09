@@ -8,6 +8,7 @@
     ./tmux
     ./git
     ./xdg
+    ./claude
   ];
 
   home.username = username;
