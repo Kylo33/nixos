@@ -20,6 +20,7 @@
     keepassxc
     obsidian
     syncthing
+    discord
   ];
 
   services.syncthing = {

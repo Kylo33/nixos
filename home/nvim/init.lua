@@ -52,8 +52,6 @@ vim.keymap.set({ 'n' }, '<leader>q', ':quit<CR>')
 vim.keymap.set({ 'n' }, '<leader>lr', ':lsp restart<CR>')
 vim.keymap.set({ 'n' }, '<leader>lh', ':checkhealth vim.lsp<CR>')
 
-vim.keymap.set({ 'n' }, '<leader>n', ':next<CR>')
-
 -- [[ Basic Auto commands ]].
 
 -- Highlight when yanking (copying) text.
