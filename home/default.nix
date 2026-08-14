@@ -21,6 +21,8 @@
     obsidian
     syncthing
     discord
+    google-chrome
+    cheese
   ];
 
   services.syncthing = {
