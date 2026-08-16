@@ -16,13 +16,14 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
+    anki
+    cheese
+    discord
     gh
+    google-chrome
     keepassxc
     obsidian
     syncthing
-    discord
-    google-chrome
-    cheese
   ];
 
   services.syncthing = {
