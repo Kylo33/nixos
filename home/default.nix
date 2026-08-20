@@ -19,6 +19,7 @@
     anki
     cheese
     discord
+    easyeffects
     gcc
     gh
     google-chrome
