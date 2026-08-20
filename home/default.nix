@@ -19,6 +19,7 @@
     anki
     cheese
     discord
+    gcc
     gh
     google-chrome
     keepassxc
