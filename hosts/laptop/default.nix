@@ -1,4 +1,10 @@
-{ config, pkgs, username, hostname, ... }:
+{
+  config,
+  pkgs,
+  username,
+  hostname,
+  ...
+}:
 
 {
   imports = [
@@ -12,7 +18,8 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  boot.initrd.luks.devices."luks-2c6ea7a5-caed-49dd-b227-7032fe7cff06".device = "/dev/disk/by-uuid/2c6ea7a5-caed-49dd-b227-7032fe7cff06";
+  boot.initrd.luks.devices."luks-2c6ea7a5-caed-49dd-b227-7032fe7cff06".device =
+    "/dev/disk/by-uuid/2c6ea7a5-caed-49dd-b227-7032fe7cff06";
   networking.hostName = hostname; # Define your hostname.
 
   networking.networkmanager.enable = true;
@@ -62,8 +69,11 @@
   users.users.${username} = {
     isNormalUser = true;
     description = "Renn Gilbert";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    packages = [ ];
     shell = pkgs.fish;
   };
 
@@ -75,13 +85,30 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   environment.systemPackages = with pkgs; [
-    gcc
     git
     neovim
+    uv
+    vial
     wl-clipboard
   ];
+
+  services.udev.packages = with pkgs; [ vial ];
+
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      stdenv.cc.cc.lib # libstdc++.so.6 for most wheels
+      zlib # CPython, many compiled extensions
+      openssl
+      libffi
+      glibc
+    ];
+  };
 
   system.stateVersion = "26.05";
 }
