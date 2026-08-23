@@ -5,6 +5,9 @@
     clang-tools
     nixd
     nixfmt
+    ruff
+    ty
+    lua-language-server
   ];
 
   programs.neovim = {

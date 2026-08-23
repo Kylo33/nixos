@@ -123,6 +123,15 @@ vim.keymap.set({ 'n' }, '<leader>e', "<CMD>Oil<CR>")
 vim.lsp.enable({
     'clangd',
     'nixd',
+    'ruff',
+    'ty',
+    'lua_ls'
+})
+
+vim.lsp.config('clangd', {
+    init_options = {
+        fallbackFlags = {'--std=c++23'},
+    },
 })
 
 vim.keymap.set({ 'n' }, '<leader>lf', vim.lsp.buf.format)
