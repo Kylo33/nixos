@@ -26,6 +26,7 @@
     keepassxc
     obsidian
     syncthing
+    typst
   ];
 
   services.syncthing = {
