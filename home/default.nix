@@ -25,6 +25,7 @@
     gh
     google-chrome
     keepassxc
+    obs-studio
     obsidian
     syncthing
     typst
