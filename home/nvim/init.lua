@@ -125,7 +125,9 @@ vim.lsp.enable({
     'nixd',
     'ruff',
     'ty',
-    'lua_ls'
+    'lua_ls',
+    'gopls',
+    'tinymist',
 })
 
 vim.lsp.config('clangd', {

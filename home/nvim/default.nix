@@ -3,11 +3,13 @@
 {
   home.packages = with pkgs; [
     clang-tools
+    gopls
     nixd
     nixfmt
     ruff
     ty
     lua-language-server
+    tinymist
   ];
 
   programs.neovim = {
@@ -26,6 +28,7 @@
       { plugin = oil-nvim; }
       { plugin = sonokai; }
       { plugin = indent-o-matic; }
+      { plugin = typst-preview-nvim; }
     ];
   };
 }

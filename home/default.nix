@@ -8,7 +8,6 @@
     ./tmux
     ./git
     ./xdg
-    ./claude
   ];
 
   home.username = username;
@@ -18,15 +17,16 @@
   home.packages = with pkgs; [
     anki
     cheese
-    codex
     discord
     easyeffects
     gcc
     gh
     google-chrome
+    himalaya
     keepassxc
     obs-studio
     obsidian
+    ocaml
     syncthing
     typst
   ];
