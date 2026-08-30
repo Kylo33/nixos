@@ -52,6 +52,7 @@ vim.keymap.set({ 'n' }, '<leader>w', ':write<CR>')
 vim.keymap.set({ 'n' }, '<leader>q', ':quit<CR>')
 vim.keymap.set({ 'n' }, '<leader>lr', ':lsp restart<CR>')
 vim.keymap.set({ 'n' }, '<leader>lh', ':checkhealth vim.lsp<CR>')
+vim.keymap.set({ 'n' }, '<leader>ya', ":%y<CR>") -- ya for yank all
 
 -- [[ Basic Auto commands ]].
 
