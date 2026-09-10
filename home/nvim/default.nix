@@ -10,6 +10,7 @@
     ty
     lua-language-server
     tinymist
+    uiua
   ];
 
   programs.neovim = {

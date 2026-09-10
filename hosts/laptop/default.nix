@@ -99,6 +99,7 @@
   ];
   environment.systemPackages = with pkgs; [
     git
+    go
     neovim
     uv
     vial

@@ -1,6 +1,6 @@
 -- [[ Configure basic options ]]
-
 vim.g.mapleader = ' '
+vim.o.rtp = vim.o.rtp .. ',/home/renng/.opam/cs3110-2026fa/share/ocp-indent/vim'
 
 vim.o.number = true
 vim.o.relativenumber = true
@@ -129,6 +129,8 @@ vim.lsp.enable({
     'lua_ls',
     'gopls',
     'tinymist',
+    'uiua',
+    'ocamllsp',
 })
 
 vim.lsp.config('clangd', {

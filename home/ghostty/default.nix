@@ -11,6 +11,7 @@
     settings = {
       theme = "Sonokai";
       font-family = "JetBrains Mono Nerd Font";
+      # font-family = "Uiua386";
       font-feature = [
         "-calt"
       ];

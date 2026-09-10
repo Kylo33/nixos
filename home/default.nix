@@ -8,6 +8,7 @@
     ./tmux
     ./git
     ./xdg
+    ./claude
   ];
 
   home.username = username;
@@ -29,6 +30,9 @@
     ocaml
     syncthing
     typst
+    numbat
+
+    uiua386
   ];
 
   services.syncthing = {
