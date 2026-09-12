@@ -27,7 +27,7 @@
       { plugin = mini-surround; }
       { plugin = blink-cmp; }
       { plugin = oil-nvim; }
-      { plugin = sonokai; }
+      { plugin = vague-nvim; }
       { plugin = indent-o-matic; }
       { plugin = typst-preview-nvim; }
     ];

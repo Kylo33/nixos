@@ -85,7 +85,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- [[ Plugins ]]
 
-vim.cmd.colorscheme('sonokai')
+vim.cmd.colorscheme('vague')
 
 -- mini.ai
 require('mini.ai').setup()

@@ -9,9 +9,8 @@
   programs.ghostty = {
     enable = true;
     settings = {
-      theme = "Sonokai";
+      theme = "Vague";
       font-family = "JetBrains Mono Nerd Font";
-      # font-family = "Uiua386";
       font-feature = [
         "-calt"
       ];
