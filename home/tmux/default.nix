@@ -10,5 +10,11 @@
     baseIndex = 1;
     keyMode = "vi";
     customPaneNavigationAndResize = true;
+    extraConfig = ''
+      set -g renumber-windows
+      set -g status-position top
+      set -g status-justify absolute-centre
+      set -g status-style "bg=default"
+    '';
   };
 }
