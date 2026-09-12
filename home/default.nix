@@ -27,12 +27,9 @@
     keepassxc
     obs-studio
     obsidian
-    ocaml
     syncthing
     typst
-    numbat
-
-    uiua386
+    libqalculate
   ];
 
   services.syncthing = {
