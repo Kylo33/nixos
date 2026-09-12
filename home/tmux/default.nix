@@ -1,8 +1,14 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    tmux
-  ];
+  home.packages =
+    with pkgs;
+    let
+      open-github = writers.writeFishBin "open-github" (builtins.readFile ./open_github.fish);
+    in
+    [
+      tmux
+      open-github
+    ];
 
   programs.tmux = {
     enable = true;
@@ -23,6 +29,7 @@
       set -g window-status-current-style "fg=blue,bold"
 
       bind r source-file "~/.config/tmux/tmux.conf"
+      bind g run-shell open-github
     '';
   };
 }
