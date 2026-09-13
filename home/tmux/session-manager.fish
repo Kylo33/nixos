@@ -19,7 +19,7 @@ set -l session_name (string replace -a '.' '_' $selected_name)
 
 if not tmux has-session -t $session_name
     tmux new-session -ds $session_name -c $selected
-    tmux select-window -t "$selected_name:1"
+    tmux select-window -t "$session_name:1"
 end
 
-tmux switch-client -t $selected_name
+tmux switch-client -t $session_name
