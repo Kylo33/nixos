@@ -15,13 +15,11 @@
           ])}"
         ];
       } (builtins.readFile ./session-manager.fish);
-      in-nix-develop = writers.writeFishBin "in-nix-develop" (builtins.readFile ./in-nix-develop.fish);
     in
     [
       tmux
       open-github
       session-manager
-      in-nix-develop
     ];
 
   programs.tmux = {
@@ -37,7 +35,7 @@
       set -g status-position top
       set -g status-justify absolute-centre
       set -g status-style "bg=default"
-      set -g status-right "#(in-nix-develop nix-develop)"
+      set -g status-right ""
       set -g status-left "#S"
 
       set -g window-status-current-style "fg=blue,bold"
