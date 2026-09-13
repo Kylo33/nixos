@@ -6,6 +6,8 @@
 
       abbr -a e $EDITOR
       abbr -a cc "g++ -std=c++23 solve.cpp && ./a.out<1"
+
+      set __fish_git_prompt_showdirtystate 1
     '';
     functions = {
       fish_prompt = ''
