@@ -131,6 +131,7 @@ vim.lsp.enable({
     'tinymist',
     'uiua',
     'ocamllsp',
+    'fish_lsp',
 })
 
 vim.lsp.config('clangd', {
