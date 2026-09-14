@@ -7,11 +7,12 @@ if test -z "$selected"
     set selected (fd . $DIRS --type d --max-depth 1\
         | string replace -r "^$HOME" "" \
         | sk --color=bw)
-    set selected "$HOME$selected"
-end
 
-if test -z "$selected"
-    exit 0
+    if test -z "$selected"
+        exit 0
+    end
+
+    set selected "$HOME$selected"
 end
 
 set -l selected_name (basename $selected)

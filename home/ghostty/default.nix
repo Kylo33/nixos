@@ -14,6 +14,7 @@
       font-feature = [
         "-calt"
       ];
+      font-size = 14;
     };
   };
 }

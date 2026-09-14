@@ -9,10 +9,13 @@
           "--prefix"
           "PATH"
           ":"
-          "${lib.makeBinPath (with pkgs; [
-            fd
-            skim
-          ])}"
+          "${lib.makeBinPath (
+            with pkgs;
+            [
+              fd
+              skim
+            ]
+          )}"
         ];
       } (builtins.readFile ./session-manager.fish);
     in
