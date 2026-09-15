@@ -15,7 +15,9 @@
   home.homeDirectory = "/home/${username}";
 
   # Packages that should be installed to the user profile.
-  home.packages = with pkgs; [
+  home.packages = let 
+    search-nvim-lspconfig = pkgs.callPackage ./scripts/search-nvim-lspconfig/package.nix {};
+  in with pkgs; [
     anki
     cheese
     discord
@@ -30,6 +32,8 @@
     syncthing
     typst
     libqalculate
+
+    search-nvim-lspconfig
   ];
 
   services.syncthing = {
