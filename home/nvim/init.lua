@@ -132,6 +132,7 @@ vim.lsp.enable({
     'uiua',
     'ocamllsp',
     'fish_lsp',
+    'ols',
 })
 
 vim.lsp.config('clangd', {
