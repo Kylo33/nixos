@@ -85,7 +85,9 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- [[ Plugins ]]
 
-vim.cmd.colorscheme('vague')
+vim.g.zenbones_compat = 1
+vim.o.background = "light"
+vim.cmd.colorscheme('zenbones')
 
 -- mini.ai
 require('mini.ai').setup()

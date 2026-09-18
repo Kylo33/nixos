@@ -9,7 +9,7 @@
   programs.ghostty = {
     enable = true;
     settings = {
-      theme = "Vague";
+      theme = "Zenbones";
       font-family = "JetBrains Mono Nerd Font";
       font-feature = [
         "-calt"
