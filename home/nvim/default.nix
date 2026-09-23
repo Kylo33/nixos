@@ -10,7 +10,6 @@
     ty
     lua-language-server
     tinymist
-    uiua
     fish-lsp
   ];
 

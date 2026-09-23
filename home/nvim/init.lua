@@ -134,13 +134,13 @@ vim.lsp.enable({
     'ocamllsp',
     'fish_lsp',
     'ols',
+    'harper_ls',
 })
 
 vim.lsp.config('clangd', {
     init_options = {
-        fallbackFlags = {'--std=c++23'},
+        fallbackFlags = { '--std=c++23' },
     },
 })
 
 vim.keymap.set({ 'n' }, '<leader>lf', vim.lsp.buf.format)
-

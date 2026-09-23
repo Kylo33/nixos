@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-set -l DIRS $HOME $HOME/Code $HOME/Code/cp
+set -l DIRS $HOME $HOME/Code $HOME/Code/cp $HOME/Documents
 
 set -l selected $argv[1]
 if test -z "$selected"
