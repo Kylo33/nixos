@@ -9,7 +9,7 @@
   programs.ghostty = {
     enable = true;
     settings = {
-      theme = "Zenbones";
+      theme = "Gruvbox Dark";
       font-family = "JetBrains Mono Nerd Font";
       font-feature = [
         "-calt"

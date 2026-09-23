@@ -28,7 +28,7 @@
       { plugin = mini-surround; }
       { plugin = blink-cmp; }
       { plugin = oil-nvim; }
-      { plugin = zenbones-nvim; }
+      { plugin = gruvbox-nvim; }
       { plugin = indent-o-matic; }
       { plugin = typst-preview-nvim; }
     ];
