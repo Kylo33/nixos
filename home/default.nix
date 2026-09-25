@@ -32,6 +32,7 @@
     syncthing
     typst
     libqalculate
+    zathura
 
     search-nvim-lspconfig
   ];
