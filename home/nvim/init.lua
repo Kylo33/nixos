@@ -130,11 +130,10 @@ vim.lsp.enable({
     'lua_ls',
     'gopls',
     'tinymist',
-    'uiua',
     'ocamllsp',
     'fish_lsp',
-    'ols',
     'harper_ls',
+    'kotlin_lsp',
 })
 
 vim.lsp.config('clangd', {
