@@ -6,5 +6,6 @@
   programs.claude-code = {
     enable = true;
     settings.theme = "dark";
+    settings.model = "opus";
   };
 }
