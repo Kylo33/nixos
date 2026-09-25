@@ -30,7 +30,9 @@
     containers.enable = true;
     podman = {
       enable = true;
-      dockerCompat = true;
+    };
+    docker = {
+      enable = true;
     };
   };
 
@@ -80,6 +82,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "docker"
     ];
     packages = [ ];
     shell = pkgs.fish;
