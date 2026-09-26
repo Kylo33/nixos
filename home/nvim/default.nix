@@ -11,6 +11,7 @@
     lua-language-server
     tinymist
     fish-lsp
+    rust-analyzer
   ];
 
   programs.neovim = {
