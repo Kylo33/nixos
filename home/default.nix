@@ -32,12 +32,14 @@
       gh
       google-chrome
       himalaya
+      httpie
+      jq
       keepassxc
+      libqalculate
       obs-studio
       obsidian
       syncthing
       typst
-      libqalculate
       zathura
 
       search-nvim-lspconfig
