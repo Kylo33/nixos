@@ -134,6 +134,7 @@ vim.lsp.enable({
     'harper_ls',
     'kotlin_lsp',
     'rust_analyzer',
+    'ts_ls',
 })
 
 vim.lsp.config('clangd', {

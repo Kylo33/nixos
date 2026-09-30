@@ -12,6 +12,7 @@
     tinymist
     fish-lsp
     rust-analyzer
+    typescript-language-server
   ];
 
   programs.neovim = {
