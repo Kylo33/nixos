@@ -3,14 +3,14 @@
 
   home.packages = with pkgs; [
     ghostty
-    nerd-fonts.jetbrains-mono
+    nerd-fonts.adwaita-mono
   ];
 
   programs.ghostty = {
     enable = true;
     settings = {
-      theme = "Gruvbox Dark";
-      font-family = "JetBrains Mono Nerd Font";
+      theme = "dark:Gruvbox Dark,light:Gruvbox Light";
+      font-family = "Adwaita Mono Nerd Font";
       font-feature = [
         "-calt"
       ];

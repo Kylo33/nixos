@@ -85,7 +85,6 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- [[ Plugins ]]
 
-vim.o.background = "dark"
 vim.cmd.colorscheme('gruvbox')
 
 -- mini.ai
