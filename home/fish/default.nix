@@ -8,17 +8,16 @@
       abbr -a cc "g++ -std=c++23 solve.cpp && ./a.out<1"
 
       set __fish_git_prompt_showdirtystate 1
+      fish_hybrid_key_bindings
     '';
     functions = {
       fish_prompt = ''
-        set -l last_status $status
-
-        set -l stat
-        if test $last_status -ne 0
-            set stat (set_color red)" ($last_status)"
+        set -l sep λ
+        if test -n "$IN_NIX_SHELL"
+            set sep 
         end
 
-        printf "%s%s%s %sλ %s" (set_color blue) (prompt_pwd) "$stat" (set_color bryellow) (set_color --reset)
+        echo -n "$(set_color blue)$(prompt_pwd) $(set_color bryellow)$sep$(set_color --reset) "
       '';
       fish_right_prompt = ''
         printf "%s%s%s" (set_color blue) (fish_vcs_prompt) (set_color --reset)
