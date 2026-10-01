@@ -137,6 +137,26 @@ vim.lsp.enable({
     'ts_ls',
 })
 
+vim.lsp.config('ts_ls', {
+    init_options = {
+        embeddedLanguages = {
+            html = true,
+        },
+        plugins = {
+            {
+                name = "@vue/typescript-plugin",
+                location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
+                languages = { "javascript", "typescript", "vue" },
+            },
+        },
+    },
+    filetypes = {
+        "javascript",
+        "typescript",
+        "vue",
+    },
+})
+
 vim.lsp.config('clangd', {
     init_options = {
         fallbackFlags = { '--std=c++23' },
