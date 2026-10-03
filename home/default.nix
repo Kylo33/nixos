@@ -12,6 +12,7 @@
     ./git
     ./xdg
     ./claude
+    ./zen
   ];
 
   home.username = username;

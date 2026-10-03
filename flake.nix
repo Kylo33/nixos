@@ -7,6 +7,13 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake/beta";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
+    };
   };
 
   outputs =
@@ -14,11 +21,11 @@
       nixpkgs,
       home-manager,
       ...
-    }:
+    }@inputs:
     let
       username = "renng";
       hostname = "nixos";
-      specialArgs = { inherit username hostname; };
+      specialArgs = { inherit username hostname inputs; };
     in
     {
       nixosConfigurations = {
