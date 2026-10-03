@@ -12,6 +12,7 @@
       push = {
         autoSetupRemote = true;
       };
+      credential.helper = "store";
     };
   };
 }

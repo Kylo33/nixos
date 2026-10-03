@@ -21,6 +21,21 @@
   home.packages =
     let
       search-nvim-lspconfig = pkgs.callPackage ./scripts/search-nvim-lspconfig/package.nix { };
+      group-assign =
+        with pkgs;
+        buildGoModule {
+          name = "group-assign";
+
+          src = fetchFromForgejo {
+            domain = "git.devmail.group";
+            owner = "renn";
+            repo = "group-assign";
+            rev = "efe894eb27976e35d5c5038231cd4767eb4aa3ce";
+            hash = "sha256-+tJy2JVWOOyVT7wTXkmlJqmPZZWMoxQxuqOBapn0sic=";
+          };
+
+          vendorHash = null;
+        };
     in
     with pkgs;
     [
@@ -44,6 +59,7 @@
 
       search-nvim-lspconfig
       forgejo-cli
+      group-assign
     ];
 
   services.syncthing = {
