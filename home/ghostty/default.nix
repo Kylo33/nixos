@@ -15,9 +15,6 @@
         "-calt"
       ];
       font-size = 14;
-      custom-shader = [
-        (toString ./cursor_warp.glsl)
-      ];
     };
   };
 }
