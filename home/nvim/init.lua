@@ -135,6 +135,7 @@ vim.lsp.enable({
     'kotlin_lsp',
     'rust_analyzer',
     'ts_ls',
+    'ols',
 })
 
 vim.lsp.config('ts_ls', {
