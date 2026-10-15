@@ -13,6 +13,7 @@
     fish-lsp
     rust-analyzer
     typescript-language-server
+    clojure-lsp
   ];
 
   programs.neovim = {
@@ -29,9 +30,12 @@
       { plugin = mini-surround; }
       { plugin = blink-cmp; }
       { plugin = oil-nvim; }
-      { plugin = gruvbox-nvim; }
+      { plugin = vague-nvim; }
       { plugin = indent-o-matic; }
       { plugin = typst-preview-nvim; }
+      { plugin = vim-jack-in; }
+      { plugin = vim-dispatch; }
+      { plugin = conjure; }
     ];
   };
 }

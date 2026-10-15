@@ -1,5 +1,6 @@
 -- [[ Configure basic options ]]
 vim.g.mapleader = ' '
+vim.g.maplocalleader = ','
 vim.o.rtp = vim.o.rtp .. ',/home/renng/.opam/cs3110-2026fa/share/ocp-indent/vim'
 
 vim.o.number = true
@@ -85,7 +86,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- [[ Plugins ]]
 
-vim.cmd.colorscheme('gruvbox')
+vim.cmd.colorscheme('vague')
 
 -- mini.ai
 require('mini.ai').setup()
@@ -136,6 +137,7 @@ vim.lsp.enable({
     'rust_analyzer',
     'ts_ls',
     'ols',
+    'clojure_lsp',
 })
 
 vim.lsp.config('ts_ls', {

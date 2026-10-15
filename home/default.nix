@@ -55,6 +55,10 @@
       syncthing
       typst
       zathura
+      newcomputermodern
+      inkscape
+      clojure
+      unzip
 
       search-nvim-lspconfig
       forgejo-cli

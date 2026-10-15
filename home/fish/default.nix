@@ -6,6 +6,7 @@
 
       abbr -a e $EDITOR
       abbr -a cc "g++ -std=c++23 solve.cpp && ./a.out<1"
+      abbr -a nd "nix develop -c fish"
       abbr -a gpf "git push --force-with-lease"
       abbr -a gcb "git checkout -b"
       abbr -a grh "git reset --hard origin/main"
@@ -26,6 +27,9 @@
       '';
       fish_right_prompt = ''
         printf "%s%s%s" (set_color blue) (fish_vcs_prompt) (set_color --reset)
+      '';
+      kill_tmux = ''
+        while tmux kill-session;;end
       '';
     };
   };
