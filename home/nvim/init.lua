@@ -17,7 +17,7 @@ vim.o.foldmethod = 'marker'
 vim.o.splitright = true
 vim.o.splitbelow = true
 
-vim.o.winborder = 'single'
+-- vim.o.winborder = 'single'
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.o.ignorecase = true
@@ -135,29 +135,8 @@ vim.lsp.enable({
     'harper_ls',
     'kotlin_lsp',
     'rust_analyzer',
-    'ts_ls',
     'ols',
     'clojure_lsp',
-})
-
-vim.lsp.config('ts_ls', {
-    init_options = {
-        embeddedLanguages = {
-            html = true,
-        },
-        plugins = {
-            {
-                name = "@vue/typescript-plugin",
-                location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
-                languages = { "javascript", "typescript", "vue" },
-            },
-        },
-    },
-    filetypes = {
-        "javascript",
-        "typescript",
-        "vue",
-    },
 })
 
 -- vim.lsp.config('clangd', {

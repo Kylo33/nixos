@@ -1,6 +1,7 @@
 {
   pkgs,
   username,
+  inputs,
   ...
 }:
 {
@@ -11,12 +12,12 @@
     ./tmux
     ./git
     ./xdg
+    ./emacs
   ];
 
   home.username = username;
   home.homeDirectory = "/home/${username}";
 
-  # Packages that should be installed to the user profile.
   home.packages =
     let
       search-nvim-lspconfig = pkgs.callPackage ./scripts/search-nvim-lspconfig/package.nix { };
@@ -58,7 +59,13 @@
       newcomputermodern
       inkscape
       clojure
+      zip
       unzip
+      cabal-install
+      ghc
+      pi-coding-agent
+      weechat
+      element-desktop
 
       search-nvim-lspconfig
       forgejo-cli
@@ -67,6 +74,11 @@
 
   services.syncthing = {
     enable = true;
+  };
+
+  programs.neovim = {
+    enable = true;
+    package = inputs.neovim-nightly-overlay.packages.${pkgs.stdenv.hostPlatform.system}.default;
   };
 
   home.stateVersion = "26.05";

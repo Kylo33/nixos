@@ -12,7 +12,6 @@
     tinymist
     fish-lsp
     rust-analyzer
-    typescript-language-server
     clojure-lsp
   ];
 
@@ -35,7 +34,7 @@
       { plugin = typst-preview-nvim; }
       { plugin = vim-jack-in; }
       { plugin = vim-dispatch; }
-      { plugin = conjure; }
+      # { plugin = conjure; }
     ];
   };
 }

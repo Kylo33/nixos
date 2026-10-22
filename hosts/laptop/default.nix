@@ -61,6 +61,7 @@
   services.xserver.xkb = {
     layout = "us";
     variant = "";
+    options = "ctrl:nocaps";
   };
 
   # Enable CUPS to print documents.
@@ -103,7 +104,6 @@
   environment.systemPackages = with pkgs; [
     git
     go
-    neovim
     uv
     vial
     wl-clipboard
