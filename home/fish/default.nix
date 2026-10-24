@@ -12,6 +12,7 @@
       abbr -a grh "git reset --hard origin/main"
       abbr -a gsu "git stash push"
       abbr -a gso "git stash pop"
+      abbr -a gca "git commit --amend"
 
       set __fish_git_prompt_showdirtystate 1
       fish_hybrid_key_bindings

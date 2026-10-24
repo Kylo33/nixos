@@ -76,6 +76,12 @@
     enable = true;
   };
 
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
+    options.light = true;
+  };
+
   programs.neovim = {
     enable = true;
     package = inputs.neovim-nightly-overlay.packages.${pkgs.stdenv.hostPlatform.system}.default;
