@@ -13,6 +13,7 @@
     fish-lsp
     rust-analyzer
     clojure-lsp
+    haskell-language-server
   ];
 
   programs.neovim = {

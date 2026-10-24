@@ -32,8 +32,8 @@
     keyMode = "vi";
     customPaneNavigationAndResize = true;
     extraConfig = ''
-      set -a terminal-features "tmux-color256:RGB"
-      set -g renumber-windows
+      set -a terminal-features "tmux-256color:RGB"
+      set -g renumber-windows on
 
       set -g status-position top
       set -g status-justify absolute-centre

@@ -23,6 +23,7 @@
   networking.hostName = hostname; # Define your hostname.
 
   networking.networkmanager.enable = true;
+  networking.firewall.allowedTCPPorts = [ 8000 ];
 
   time.timeZone = "America/Denver";
 

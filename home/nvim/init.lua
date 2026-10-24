@@ -143,6 +143,9 @@ vim.lsp.enable({
     'rust_analyzer',
     'ols',
     'clojure_lsp',
+    'hls',
+    'tsc',
+    'biome',
 })
 
 -- vim.lsp.config('clangd', {
