@@ -86,7 +86,13 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- [[ Plugins ]]
 
-vim.cmd.colorscheme('vague')
+vim.cmd.colorscheme('catppuccin')
+require('catppuccin').setup({
+    background = {
+        light = 'latte',
+        dark = 'mocha',
+    }
+})
 
 -- mini.ai
 require('mini.ai').setup()

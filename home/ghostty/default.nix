@@ -3,17 +3,14 @@
 
   home.packages = with pkgs; [
     ghostty
-    nerd-fonts.intone-mono
+    nerd-fonts.jetbrains-mono
   ];
 
   programs.ghostty = {
     enable = true;
     settings = {
-      theme = "Vague";
-      font-family = "IntOneMono Nerd Font";
-      font-feature = [
-        "-calt"
-      ];
+      theme = "dark:Catppuccin Mocha,light:Catppuccin Latte";
+      font-family = "JetBrainsMono Nerd Font";
       font-size = 14;
     };
   };

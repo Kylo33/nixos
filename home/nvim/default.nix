@@ -29,12 +29,11 @@
       { plugin = mini-surround; }
       { plugin = blink-cmp; }
       { plugin = oil-nvim; }
-      { plugin = vague-nvim; }
+      { plugin = catppuccin-nvim; }
       { plugin = indent-o-matic; }
       { plugin = typst-preview-nvim; }
       { plugin = vim-jack-in; }
       { plugin = vim-dispatch; }
-      # { plugin = conjure; }
     ];
   };
 }
