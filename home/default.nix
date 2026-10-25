@@ -12,7 +12,6 @@
     ./tmux
     ./git
     ./xdg
-    ./emacs
   ];
 
   home.username = username;
