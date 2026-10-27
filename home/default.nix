@@ -65,6 +65,7 @@
       pi-coding-agent
       weechat
       element-desktop
+      direnv
 
       search-nvim-lspconfig
       forgejo-cli
@@ -84,6 +85,13 @@
   programs.neovim = {
     enable = true;
     package = inputs.neovim-nightly-overlay.packages.${pkgs.stdenv.hostPlatform.system}.default;
+  };
+
+  programs.direnv = {
+    enable = true;
+    enableFishIntegration = true;
+    silent = true;
+    nix-direnv.enable = true;
   };
 
   home.stateVersion = "26.05";
