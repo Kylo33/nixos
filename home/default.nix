@@ -66,6 +66,13 @@
       weechat
       element-desktop
       direnv
+      nix-index
+      comma
+      zig
+      dune
+      gnumake
+      geopard
+      odin
 
       search-nvim-lspconfig
       forgejo-cli
@@ -79,7 +86,7 @@
   programs.delta = {
     enable = true;
     enableGitIntegration = true;
-    options.light = true;
+    options.dark = true;
   };
 
   programs.neovim = {

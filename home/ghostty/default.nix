@@ -11,6 +11,7 @@
     settings = {
       theme = "dark:Catppuccin Mocha,light:Catppuccin Latte";
       font-family = "JetBrainsMono Nerd Font";
+      font-feature = "-calt";
       font-size = 14;
     };
   };

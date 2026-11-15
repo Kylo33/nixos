@@ -146,12 +146,13 @@ vim.lsp.enable({
     'hls',
     'tsc',
     'biome',
+    'zls',
 })
 
--- vim.lsp.config('clangd', {
---     init_options = {
---         fallbackFlags = { '--std=c++23' },
---     },
--- })
+vim.lsp.config('clangd', {
+    init_options = {
+        fallbackFlags = { '--std=c++23' },
+    },
+})
 
 vim.keymap.set({ 'n' }, '<leader>lf', vim.lsp.buf.format)
