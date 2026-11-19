@@ -71,8 +71,9 @@
       zig
       dune
       gnumake
-      geopard
       odin
+      hexyl
+      lagrange
 
       search-nvim-lspconfig
       forgejo-cli
