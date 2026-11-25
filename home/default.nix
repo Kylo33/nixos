@@ -55,15 +55,10 @@
       syncthing
       typst
       zathura
-      newcomputermodern
       inkscape
       clojure
       zip
       unzip
-      cabal-install
-      ghc
-      pi-coding-agent
-      weechat
       element-desktop
       direnv
       nix-index
@@ -74,6 +69,7 @@
       odin
       hexyl
       lagrange
+      hyperfine
 
       search-nvim-lspconfig
       forgejo-cli

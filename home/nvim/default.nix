@@ -11,10 +11,6 @@
     lua-language-server
     tinymist
     fish-lsp
-    rust-analyzer
-    clojure-lsp
-    haskell-language-server
-    zls
     ols
   ];
 
@@ -45,14 +41,10 @@
           mini-pairs
           mini-pick
           mini-surround
-          blink-cmp
           oil-nvim
-          catppuccin-nvim
+          kanso-nvim
           indent-o-matic
           typst-preview-nvim
-          vim-jack-in
-          vim-dispatch
-          conjure
           gemini-vim-syntax
         ];
     };

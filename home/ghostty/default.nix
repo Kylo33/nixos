@@ -3,15 +3,14 @@
 
   home.packages = with pkgs; [
     ghostty
-    nerd-fonts.jetbrains-mono
+    nerd-fonts.adwaita-mono
   ];
 
   programs.ghostty = {
     enable = true;
     settings = {
-      theme = "dark:Catppuccin Mocha,light:Catppuccin Latte";
-      font-family = "JetBrainsMono Nerd Font";
-      font-feature = "-calt";
+      theme = "Kanso Ink";
+      font-family = "AdwaitaMono Nerd Font";
       font-size = 14;
     };
   };
